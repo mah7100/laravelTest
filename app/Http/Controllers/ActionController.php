@@ -14,11 +14,15 @@ class ActionController extends Controller
     Log::debug('add');
     Log::debug($request);
     return view('welcome');
+    \DB::table('tasks') ->insert([
+        'name' => 'テスト',
+    ]);
   }
   public function delete(Request $request) {
     Log::debug('delete');
     Log::debug($request);
     return view('welcome');
+    
   }
 }
 
