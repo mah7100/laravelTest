@@ -16,14 +16,17 @@
     </form>
     
     <ul id="shopping-list">
+    @foreach($tasks as $task)
       <form action="/delete" method="post" id="delete-button">
+      <input type="hidden" name="id" value="{{ $task->id }}"> 
       @csrf
         <li>
-            <span>
+            <span>{{ $task->content }}
             <input type="submit" name="button" id="delete" value="削除"></input>
             </span>
           </li>
       </form>
+    @endforeach
     </ul>
 
     <div class="footer">

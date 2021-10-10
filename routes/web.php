@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'App\Http\Controllers\ActionController@index');
 Route::post('/add', 'App\Http\Controllers\ActionController@add');
-
 Route::post('/delete', 'App\Http\Controllers\ActionController@delete');
