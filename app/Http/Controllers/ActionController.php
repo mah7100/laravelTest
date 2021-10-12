@@ -12,7 +12,7 @@ use DB;
 class ActionController extends Controller
 {
   public function add(Request $request) {
-    Log::debug('');
+    Log::debug('add');
     Log::debug($request);
     Task::insert([
       'content' => $request->get("add")
